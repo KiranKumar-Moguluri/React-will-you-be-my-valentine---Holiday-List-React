@@ -40,9 +40,18 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-        {/* Do not remove the main div */}
+
+
+         <ol>
+         {this.cityList.map(location => 
+                                               <li key={location.id}> 
+                                                <div> {location.name} ({location.country}) </div> 
+                                                
+                                                </li>)}
+       </ol>
+        
       </div>
-    )
+    );
   }
 }
 
