@@ -46,10 +46,10 @@ class App extends Component {
 
           {
 
-            this.cityList.filter(data =>
-              data.country == 'India'
-            ).map(data =>
-              <li>{data.name}</li>
+            this.cityList.filter(location =>
+              location.country == 'India'
+            ).map(location =>
+              <li key="location">{location.name}</li>
             )
           
 
