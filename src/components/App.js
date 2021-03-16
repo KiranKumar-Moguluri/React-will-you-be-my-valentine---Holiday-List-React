@@ -42,14 +42,21 @@ class App extends Component {
       <div id="main">
 
 
-         <ol>
-         {this.cityList.map(location => 
-                                               <li key={location.id}> 
-                                                <div> {location.name} ({location.country}) </div> 
-                                                
-                                                </li>)}
-       </ol>
-        
+        <ol>
+
+          {
+
+            this.cityList.filter(data =>
+              data.country == 'India'
+            ).map(data =>
+              <li>{data.name}</li>
+            )
+          
+
+          }
+
+        </ol>
+
       </div>
     );
   }
