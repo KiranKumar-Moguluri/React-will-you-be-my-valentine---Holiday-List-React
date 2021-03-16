@@ -48,8 +48,8 @@ class App extends Component {
 
             this.cityList.filter(location =>
               location.country == 'India'
-            ).map(location =>
-              <li key="location">{location.name}</li>
+            ).map((location,index) =>
+              <li key={`location${index+1}`}>{location.name}</li>
             )
           
 
